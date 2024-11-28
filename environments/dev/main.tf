@@ -6,9 +6,9 @@ module "s3_bucket" {
 }
 
 module "route53" {
-  source                = "../../modules/route53"
-  zone_id               = var.zone_id
-  record_name           = var.record_name
-  cloudfront_domain_name = var.cloudfront_domain_name
+  source                  = "../../modules/route53"
+  zone_id                 = var.zone_id
+  record_name             = var.record_name
+  cloudfront_domain_name  = var.cloudfront_domain_name
   cloudfront_hosted_zone_id = var.cloudfront_hosted_zone_id
 }
