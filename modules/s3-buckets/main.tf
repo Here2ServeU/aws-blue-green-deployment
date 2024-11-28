@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "blue_green_bucket" {
   }
 }
 
-resource "aws_s3_bucket_object" "blue_version" {
+resource "aws_s3_bucket_object" "index_object" {
   bucket       = aws_s3_bucket.blue_green_bucket.id
   key          = "index.html"
   content      = file(var.index_file)
