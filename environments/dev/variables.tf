@@ -1,7 +1,14 @@
-variable "bucket_name" {}
-variable "environment" {}
-variable "index_file" {}
-variable "zone_id" {}
-variable "record_name" {}
-variable "cloudfront_domain_name" {}
-variable "cloudfront_hosted_zone_id" {}
+variable "bucket_name" {
+  description = "Name of the S3 bucket"
+  type        = string
+}
+
+variable "environment" {
+  description = "Environment name"
+  type        = string
+}
+
+variable "index_file" {
+  description = "Path to the index file"
+  type        = string
+}
