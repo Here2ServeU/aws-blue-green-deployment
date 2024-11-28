@@ -1,7 +1,7 @@
 bucket_name   = "t2s-services-dev-bucket"
 environment   = "dev"
 index_file    = "../files/index-blue.html"
-zone_id       = "<ROUTE53_ZONE_ID>"
-record_name   = "t2s-services.example.com"
-cloudfront_domain_name = "<CLOUDFRONT_DOMAIN_NAME>"
-cloudfront_hosted_zone_id = "<CLOUDFRONT_HOSTED_ZONE_ID>"
+zone_id                 = "Z3EXAMPLE123"
+record_name             = "t2s-services.example.com"
+cloudfront_domain_name  = "d123example.cloudfront.net"
+cloudfront_hosted_zone_id = "Z2FDTNDATAQYW2"  # This is the default hosted zone ID for CloudFront
