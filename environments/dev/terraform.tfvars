@@ -1,0 +1,7 @@
+bucket_name   = "t2s-services-dev-bucket"
+environment   = "dev"
+index_file    = "../files/index-blue.html"
+zone_id       = "<ROUTE53_ZONE_ID>"
+record_name   = "t2s-services.example.com"
+cloudfront_domain_name = "<CLOUDFRONT_DOMAIN_NAME>"
+cloudfront_hosted_zone_id = "<CLOUDFRONT_HOSTED_ZONE_ID>"
