@@ -9,8 +9,8 @@ module "s3_buckets" {
 
 module "route53" {
   source                  = "../../modules/route53"
-  domain_name             = "t2s-services.com" # Replace with your domain name
-  record_name             = "www.t2s-services.com" # Replace with your record name
+  domain_name             = var.domain_name # Replace with your domain name
+  record_name             = var.record_name # Replace with your record name
   blue_bucket_url         = module.s3_buckets.blue_bucket_url
   green_bucket_url        = module.s3_buckets.green_bucket_url
   active_environment      = var.active_environment
