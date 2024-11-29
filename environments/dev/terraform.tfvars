@@ -1,5 +1,6 @@
 bucket_name   = "t2s-services-dev-bucket"
 environment   = "dev"
+active_environment = "blue"
 index_file    = "../files/index-blue.html"
 zone_id                 = "Z3EXAMPLE123"
 record_name             = "t2s-services.example.com"
