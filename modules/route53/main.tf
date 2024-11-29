@@ -4,8 +4,8 @@ resource "aws_route53_record" "active_record" {
   type    = "A"
 
   alias {
-    name                   = var.active_environment == "blue" ? aws_s3_bucket.blue_bucket.website_endpoint : aws_s3_bucket.green_bucket.website_endpoint
-    zone_id                = var.route53_zone_id
+    name                   = var.active_environment == "blue" ? var.blue_bucket_url : var.green_bucket_url
+    zone_id                = var.zone_id
     evaluate_target_health = false
   }
 }
