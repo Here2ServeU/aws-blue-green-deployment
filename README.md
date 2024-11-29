@@ -1,7 +1,13 @@
 # Blue-Green Deployment with S3, CloudFront, and Route53
 
 ## Overview
-This project implements a Blue-Green Deployment model using AWS services and Terraform. The project allows toggling between "Blue" and "Green" versions of the application by deploying different index files.
+This project implements a Blue-Green Deployment model using AWS services and Terraform. It allows users to toggle between "Blue" and "Green" application versions by deploying different index files.
+
+---
+## Prerequisites
+- An Account with AWS
+- The right permissions (IAM)
+- A Custom domain to use. E.g., t2s-services.com
 
 ---
 ## File Structure
@@ -14,7 +20,20 @@ This project implements a Blue-Green Deployment model using AWS services and Ter
 
 ---
 ## Deployment Instructions
-1. Navigate to the desired environment folder (`dev`, `stage`, or `prod`).
-2. Initialize Terraform:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Here2ServeU/aws-blue-green-deployment
+   ``` 
+3. Navigate to the desired environment folder (`dev`, `stage`, or `prod`).
+4. Initialize Terraform:
    ```bash
    terraform init
+   ```
+5. Plan and Validate:
+   ```bash
+   terraform plan
+   ```
+6. Apply the Configuration:
+   ```bash
+   terraform apply
+   ```
