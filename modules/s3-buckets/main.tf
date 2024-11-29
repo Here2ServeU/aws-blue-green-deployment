@@ -13,6 +13,6 @@ resource "aws_s3_bucket" "blue_green_bucket" {
 resource "aws_s3_bucket_object" "index_object" {
   bucket       = aws_s3_bucket.blue_green_bucket.id
   key          = "index.html"
-  content      = file(var.index_file)
+  content      = file(var.index_file) # Reads the file content
   content_type = "text/html"
 }
