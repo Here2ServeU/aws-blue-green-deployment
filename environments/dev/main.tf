@@ -2,7 +2,7 @@ module "s3_bucket" {
   source        = "../../modules/s3-buckets"
   bucket_name   = var.bucket_name
   environment   = var.environment
-  index_file    = "${path.module}/../files/index-blue.html"
+  index_file    = "${path.module}/files/index-blue.html"
 }
 
 module "route53" {
