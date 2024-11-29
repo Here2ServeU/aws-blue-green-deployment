@@ -9,8 +9,9 @@ module "s3_buckets" {
 
 module "route53" {
   source                  = "../../modules/route53"
+  blue_bucket_url         = module.s3_buckets.blue_bucket_url
+  green_bucket_url        = module.s3_buckets.green_bucket_url
+  active_environment      = var.active_environment
   zone_id                 = var.zone_id
   record_name             = var.record_name
-  cloudfront_domain_name  = var.cloudfront_domain_name
-  cloudfront_hosted_zone_id = var.cloudfront_hosted_zone_id
 }
