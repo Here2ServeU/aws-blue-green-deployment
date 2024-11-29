@@ -3,8 +3,8 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "environment" {
-  description = "Environment name"
+variable "active_environment" {
+  description = "Specify active environment (blue or green)"
   type        = string
 }
 
