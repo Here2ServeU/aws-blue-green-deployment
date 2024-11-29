@@ -30,6 +30,7 @@ This project implements a Blue-Green Deployment model using AWS services and Ter
 1. Clone the repository:
    ```bash
    git clone https://github.com/Here2ServeU/aws-blue-green-deployment
+   cd aws-blue-green-deployment/
    ``` 
 3. Navigate to the desired environment folder (`dev`, `stage`, or `prod`).
 4. Initialize Terraform:
