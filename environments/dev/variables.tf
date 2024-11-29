@@ -3,6 +3,11 @@ variable "bucket_name" {
   type        = string
 }
 
+variable "environment" {
+  description = "Environment name (e.g., dev, stage, prod)"
+  type        = string
+}
+
 variable "active_environment" {
   description = "Specify active environment (blue or green)"
   type        = string
