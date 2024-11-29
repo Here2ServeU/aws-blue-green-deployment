@@ -71,6 +71,7 @@ This project implements a Blue-Green Deployment model using AWS services and Ter
 Integrate the manually created CloudFront distributions into your Terraform-managed Route 53 setup.
 
 **Update terraform.tfvars**
+
 Include the CloudFront domain names for the blue and green environments.
 ```hcl
 blue_cloudfront_url  = "t2sblue.cloudfront.net"
