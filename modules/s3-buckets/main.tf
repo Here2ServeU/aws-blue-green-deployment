@@ -81,3 +81,23 @@ resource "aws_s3_object" "green_index" {
   content      = file(var.green_index_file)
   content_type = "text/html"
 }
+
+# Disable Block Public Access for Blue Bucket
+resource "aws_s3_bucket_public_access_block" "blue_bucket_block" {
+  bucket = aws_s3_bucket.blue_bucket.id
+
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+}
+
+# Disable Block Public Access for Green Bucket
+resource "aws_s3_bucket_public_access_block" "green_bucket_block" {
+  bucket = aws_s3_bucket.green_bucket.id
+
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+}
