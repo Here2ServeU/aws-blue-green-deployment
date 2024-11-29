@@ -28,6 +28,11 @@ variable "record_name" {
   type        = string
 }
 
+variable "domain_name" {
+  description = "Domain name for the hosted zone"
+  type        = string
+}
+
 variable "cloudfront_domain_name" {
   description = "Domain name of the CloudFront distribution"
   type        = string
