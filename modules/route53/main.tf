@@ -1,11 +1,11 @@
-resource "aws_route53_record" "blue_green_record" {
+resource "aws_route53_record" "active_record" {
   zone_id = var.zone_id
   name    = var.record_name
   type    = "A"
 
   alias {
-    name                   = var.cloudfront_domain_name
-    zone_id                = var.cloudfront_hosted_zone_id
-    evaluate_target_health = true
+    name                   = var.active_environment == "blue" ? aws_s3_bucket.blue_bucket.website_endpoint : aws_s3_bucket.green_bucket.website_endpoint
+    zone_id                = var.route53_zone_id
+    evaluate_target_health = false
   }
 }
