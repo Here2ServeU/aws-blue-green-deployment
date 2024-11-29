@@ -79,6 +79,7 @@ green_cloudfront_url = "t2sgreen.cloudfront.net"
 ```
 
 **Update modules/route53/main.tf**
+
 Modify the active_record resource to use the CloudFront domain names.
 ```hcl
 resource "aws_route53_record" "active_record" {
@@ -95,6 +96,7 @@ resource "aws_route53_record" "active_record" {
 ```
 
 **Update modules/route53/variables.tf**
+
 Add the variables for the CloudFront URLs.
 ```hcl
 variable "blue_cloudfront_url" {
