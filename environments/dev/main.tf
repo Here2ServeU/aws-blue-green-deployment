@@ -2,8 +2,8 @@ module "s3_buckets" {
   source             = "../../modules/s3-buckets"
   blue_bucket_name   = "t2s-dev-blue-bucket"
   green_bucket_name  = "t2s-dev-green-bucket"
-  blue_index_file    = "${path.module}/../files/index-blue.html"
-  green_index_file   = "${path.module}/../files/index-green.html"
+  blue_index_file    = "${path.module}/files/index-blue.html"
+  green_index_file   = "${path.module}/files/index-green.html"
   environment        = "dev"
 }
 
