@@ -1,7 +1,7 @@
 # Blue-Green Deployment with S3, CloudFront, and Route53
 
 ## Overview
-This project implements a Blue-Green Deployment model using AWS services and Terraform. It allows users to toggle between "Blue" and "Green" application versions by deploying different index files.
+This project implements a Blue-Green Deployment model using AWS services and Terraform. Deploying different index files allows users to toggle between "Blue" and "Green" application versions.
 
 ---
 ## Prerequisites
@@ -11,12 +11,19 @@ This project implements a Blue-Green Deployment model using AWS services and Ter
 
 ---
 ## File Structure
-- **`files/index-blue.html`**: Displays the blue version of the service.
-- **`files/index-green.html`**: Displays the green version of the service.
 - **Modules**:
   - `s3-buckets`: Provisions S3 buckets.
   - `route53`: Sets up Route53 records.
-- **Environments**: Dev, Stage, Prod.
+- **Environments**:
+  - Dev:
+      - **`files/index-blue.html`**: Displays the blue version of the service.
+      - **`files/index-green.html`**: Displays the green version of the service.
+  - Stage:
+      - **`files/index-blue.html`**: Displays the blue version of the service.
+      - **`files/index-green.html`**: Displays the green version of the service.
+  - Prod:
+      - **`files/index-blue.html`**: Displays the blue version of the service.
+      - **`files/index-green.html`**: Displays the green version of the service.
 
 ---
 ## Deployment Instructions
