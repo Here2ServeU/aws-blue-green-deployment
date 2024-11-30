@@ -16,3 +16,10 @@ module "route53" {
   active_environment      = var.active_environment
   cloudfront_hosted_zone_id = "Z2FDTNDATAQYW2" # Default hosted zone ID for CloudFront
 }
+
+module "cloudfront" {
+  source = "../../modules/cloudfront"
+
+  blue_distribution_id  = "E19TXOBXEAB3RX" # Replace with actual ID
+  green_distribution_id = "E18XO592ZPE2MQ" # Replace with actual ID
+}
