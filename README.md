@@ -74,8 +74,8 @@ Integrate the manually created CloudFront distributions into your Terraform-mana
 
 Include the CloudFront domain names for the blue and green environments.
 ```hcl
-blue_cloudfront_url  = "t2sblue.cloudfront.net"
-green_cloudfront_url = "t2sgreen.cloudfront.net"
+blue_cloudfront_url  = "t2sblue.cloudfront.net"   # Replace with the correct URL from CloudFront
+green_cloudfront_url = "t2sgreen.cloudfront.net"  # Replace with the correct URL from CloudFront
 ```
 
 **Update modules/route53/main.tf**
