@@ -127,16 +127,41 @@ terraform apply # To apply the chances.
 2.	The CloudFront distribution should serve the correct content Depending on the active environment (blue or green).
 ---
 
+## Importing CloudFront into Terraform
+1.	Identify the CloudFront distribution ID in the AWS Management Console.
+
+2.	Import the distribution:
+```bash
+terraform import module.cloudfront.aws_cloudfront_distribution.blue <distribution-id>
+terraform import module.cloudfront.aws_cloudfront_distribution.green <distribution-id>
+```
+---
+
 ## Switching Between Blue and Green
-To switch environments, update the active_environment variable in terraform.tfvars:
+To switch environments:
+
+1.	Update the active_environment variable in terraform.tfvars:
 ```hcl
 active_environment = "green"
 ```
 
-Then reapply Terraform:
-```hcl
+2. Reapply Terraform:
+```bash
 terraform apply
 ```
+---
+
+## Clean-Up Instructions
+
+To clean up resources when they’re no longer needed:
+
+1. Run the following command in the environment folder:
+```bash
+terraform destroy
+```
+2.	Confirm the destruction of resources when prompted.
+
+3.	Verify in the AWS Console that the S3 buckets, Route 53 records, and CloudFront distributions have been deleted.
 ---
 
 ### Key Notes
